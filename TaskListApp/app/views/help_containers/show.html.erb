@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @help_container.name %>
+</p>
+
+<p>
+  <strong>Authoer:</strong>
+  <%= @help_container.authoer %>
+</p>
+
+<%= link_to 'Edit', edit_help_container_path(@help_container) %> |
+<%= link_to 'Back', help_containers_path %>

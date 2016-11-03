@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Helpholders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Authoer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @helpholders.each do |helpholder| %>
+      <tr>
+        <td><%= helpholder.name %></td>
+        <td><%= helpholder.authoer %></td>
+        <td><%= link_to 'Show', helpholder %></td>
+        <td><%= link_to 'Edit', edit_helpholder_path(helpholder) %></td>
+        <td><%= link_to 'Destroy', helpholder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Helpholder', new_helpholder_path %>

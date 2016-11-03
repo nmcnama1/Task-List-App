@@ -1,0 +1,27 @@
+<%= form_for(help_container) do |f| %>
+  <% if help_container.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(help_container.errors.count, "error") %> prohibited this help_container from being saved:</h2>
+
+      <ul>
+      <% help_container.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :authoer %>
+    <%= f.text_field :authoer %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

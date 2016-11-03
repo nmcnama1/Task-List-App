@@ -1,0 +1,1 @@
+json.partial! "help_containers/help_container", help_container: @help_container

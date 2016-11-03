@@ -1,0 +1,1 @@
+json.array! @helpholders, partial: 'helpholders/helpholder', as: :helpholder

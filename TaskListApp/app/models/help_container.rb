@@ -1,0 +1,2 @@
+class HelpContainer < ApplicationRecord
+end
