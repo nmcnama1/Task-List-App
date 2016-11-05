@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= f.label :manufacturer_id %>
-    <%= f.text_field :manufacturer_id %>
+    <%= f.collection_select :manufacturer_id, Manufacturer.all, :id, :name, prompt: "Please select a list..." %>
   </div>
 
   <div class="actions">

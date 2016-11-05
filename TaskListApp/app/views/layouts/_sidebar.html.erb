@@ -1,8 +1,7 @@
 <div class="sidebar">
   <ul>
-    <li>list1</li>
-    <li>list2</li>
-    <li>list3</li>
-    <li>list4</li>
+    <% @games.each do |game| %>
+      <li><%= link_to game.name, game %> <li>
+    <% end %>
   </ul>
 </div>
