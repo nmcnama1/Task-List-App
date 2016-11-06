@@ -10,50 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161103064827) do
+ActiveRecord::Schema.define(version: 20161106223626) do
 
-  create_table "games", force: :cascade do |t|
+  create_table "tasklists", force: :cascade do |t|
     t.string   "name"
-    t.integer  "manufacturer_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.index ["manufacturer_id"], name: "index_games_on_manufacturer_id"
-  end
-
-  create_table "help_containers", force: :cascade do |t|
-    t.string   "name"
-    t.string   "authoer"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "helpholders", force: :cascade do |t|
-    t.string   "name"
-    t.string   "authoer"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "helps", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "manufacturers", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "task_lists", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "tasks", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.integer  "tasklist_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["tasklist_id"], name: "index_tasks_on_tasklist_id"
   end
 
 end

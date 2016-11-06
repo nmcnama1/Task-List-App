@@ -1,1 +1,0 @@
-json.partial! "helpholders/helpholder", helpholder: @helpholder

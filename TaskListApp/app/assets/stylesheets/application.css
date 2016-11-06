@@ -14,9 +14,8 @@
  *= require_self
  */
 
-.sidebar {
+#sidebar {
 	float: right;
 	width: 33%;
-	background-color: #efefef;
+	background: #efefef;
 }
-

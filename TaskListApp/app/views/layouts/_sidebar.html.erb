@@ -1,7 +1,5 @@
-<div class="sidebar">
-  <ul>
-    <% @games.each do |game| %>
-      <li><%= link_to game.name, game %> <li>
-    <% end %>
-  </ul>
-</div>
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= link_to task.name, task %></li>
+  <% end %>
+</ul>

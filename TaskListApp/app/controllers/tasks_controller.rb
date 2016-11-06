@@ -10,15 +10,18 @@ class TasksController < ApplicationController
   # GET /tasks/1
   # GET /tasks/1.json
   def show
+    @tasks = Task.all
   end
 
   # GET /tasks/new
   def new
     @task = Task.new
+    @tasks = Task.all
   end
 
   # GET /tasks/1/edit
   def edit
+    @tasks = Task.all
   end
 
   # POST /tasks
@@ -69,6 +72,6 @@ class TasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.fetch(:task, {})
+      params.require(:task).permit(:name, :tasklist_id)
     end
 end

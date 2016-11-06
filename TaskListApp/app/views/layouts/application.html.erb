@@ -7,14 +7,17 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <header>
-    <h1>This is the application header</h1>
-  </header>
+
   <body>
+    <header> 
+      <h1>Task List App</h1>
+    </header>
+    <div id="sidebar">
+      <%= render 'layouts/sidebar' %>
+    </div>
     <%= yield %>
-    <%= render 'layouts/sidebar' %>
+    <footer>
+      <p>Building Web Applications</p>
+    </footer>
   </body>
-  <footer>
-    <p>This is the application footer</p>
-  </footer>
 </html>

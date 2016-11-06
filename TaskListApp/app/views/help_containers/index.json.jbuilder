@@ -1,1 +1,0 @@
-json.array! @help_containers, partial: 'help_containers/help_container', as: :help_container
