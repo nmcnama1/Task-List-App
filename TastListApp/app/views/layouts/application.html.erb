@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TastListApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>Task List App</h1>
+    </header>
+   <div id="sidebar">
+      <%= render 'layouts/sidebar' %>
+    </div>
+    <%= yield %>
+  <footer>
+    <p>Building Web Applications</p>
+  </footer>
+  </body>
+</html>
