@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Tasks</h1>
+<h1>Pending Tasks</h1>
 
 <table>
   <thead>
@@ -16,7 +16,7 @@
   </thead>
 
   <tbody>
-    <% @tasks.each do |task| %>
+    <% @tasksPending.each do |task| %>
       <tr>
         <td><%= task.title %></td>
         <td><%= task.description %></td>
@@ -32,6 +32,37 @@
   </tbody>
 </table>
 
+<h1>Completed Tasks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Priority</th>
+      <th>Due date</th>
+      <th>Is completed toggle</th>
+      <th>Task list</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasksCompleted[0..4].each do |task| %>
+      <tr>
+        <td><%= task.title %></td>
+        <td><%= task.description %></td>
+        <td><%= task.priority %></td>
+        <td><%= task.due_date %></td>
+        <td><%= task.is_completed_toggle %></td>
+        <td><%= task.task_list.name %></td>
+        <td><%= link_to 'Show', task %></td>
+        <td><%= link_to 'Edit', edit_task_path(task) %></td>
+        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 <br>
 
 <%= link_to 'New Task', new_task_path %>
