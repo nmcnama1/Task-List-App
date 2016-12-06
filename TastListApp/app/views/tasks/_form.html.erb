@@ -30,7 +30,10 @@
     <%= f.label :due_date %>
     <%= f.date_select :due_date %>
   </div>
-
+  <div>
+    <%= f.label :user_id %>
+    <%= f.collection_select :user_id, User.all, :id, :username, prompt: "No users assigned" %>
+  </div>
   <div>
     <%= f.label :is_private %>
     <%= f.check_box :is_private %>

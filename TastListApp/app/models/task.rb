@@ -1,5 +1,6 @@
 class Task < ApplicationRecord
   belongs_to :task_list
+  belongs_to :user
 
   validates :title, :priority, :due_date, :task_list, presence: true
   validates :priority, inclusion: {in: 1..10, message: "must be between 1 and 10"}
