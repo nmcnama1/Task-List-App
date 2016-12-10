@@ -1,0 +1,12 @@
+<h1>Home#index</h1>
+<h2>Your tasks:</h2>
+
+<% if @tasks.any? %>
+<ol>
+  <% @tasks.each do |task| %>
+    <li><%= task.title %></li>
+  <% end %>
+</ol>
+<% else %>
+  <p>You have no tasks.</p>
+<% end %>
